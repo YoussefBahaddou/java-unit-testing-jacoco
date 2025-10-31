@@ -22,6 +22,6 @@ After running `mvn clean verify`, all tests pass:
 - **EclEmma** (Eclipse plugin): Real-time IDE coverage, similar metrics but visual highlighting. Expected similar results (100% branches, high instructions) as both use bytecode instrumentation.
 - **Key Difference**: JaCoCo is command-line/report-focused; EclEmma is interactive. Both confirm full white-box coverage for the TP.
 
-![JaCoCo Report Screenshot](Screenshots/3.png)
-![EclEmma Report Screenshot](Screenshots/2.png)
+<img width="2560" height="292" alt="3" src="https://github.com/user-attachments/assets/2657e699-8098-46d4-aaee-ff110649c7b1" />
 
+<img width="2556" height="317" alt="2" src="https://github.com/user-attachments/assets/70b41303-4521-4bce-b7d1-b6dc8b7f3986" />
