@@ -1,0 +1,148 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > StringTools</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.example.tp</a>
+</div>
+
+<h1>Coverage Summary for Class: StringTools (com.example.tp)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">StringTools</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (3/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (14/14)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (14/14)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.example.tp;
+&nbsp;
+<b class="fc">&nbsp;public class StringTools {</b>
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Retourne un extrait sûr entre [start, end) avec règles de bornes :
+&nbsp;     * - start &lt; 0 -&gt; 0
+&nbsp;     * - end &gt; length -&gt; length
+&nbsp;     * - start &gt;= end -&gt; &quot;&quot;
+&nbsp;     * - s == null -&gt; IllegalArgumentException
+&nbsp;     */
+&nbsp;    public String safeSlice(String s, int start, int end) {
+<b class="fc">&nbsp;        if (s == null) throw new IllegalArgumentException(&quot;null s&quot;);</b>
+<b class="fc">&nbsp;        int n = s.length();</b>
+<b class="fc">&nbsp;        if (start &lt; 0) start = 0;</b>
+<b class="fc">&nbsp;        if (end &gt; n) end = n;</b>
+<b class="fc">&nbsp;        if (start &gt;= end) return &quot;&quot;;</b>
+<b class="fc">&nbsp;        return s.substring(start, end);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /** Retourne vrai si s est palindrome en ignorant la casse et les espaces. */
+&nbsp;    public boolean isLoosePalindrome(String s) {
+<b class="fc">&nbsp;        if (s == null) return false;</b>
+<b class="fc">&nbsp;        String norm = s.replaceAll(&quot;\\s+&quot;,&quot;&quot;).toLowerCase();</b>
+<b class="fc">&nbsp;        int i = 0, j = norm.length() - 1;</b>
+<b class="fc">&nbsp;        while (i &lt; j) {</b>
+<b class="fc">&nbsp;            if (norm.charAt(i) != norm.charAt(j)) return false;</b>
+<b class="fc">&nbsp;            i++; j--;</b>
+&nbsp;        }
+<b class="fc">&nbsp;        return true;</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-10-31 08:35</div>
+</div>
+</body>
+</html>
